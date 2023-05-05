@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transaction</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Transaction for <%= user.username %></h1>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Sum</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% results.forEach(item => { %>
+          <tr>
+            <td><%= item._id %></td>
+            <td><%= item.total %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
